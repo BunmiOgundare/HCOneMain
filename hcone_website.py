@@ -6,10 +6,10 @@ import os
 
 @pytest.fixture
 def browser():
-    driver = webdriver.Chrome()  # Create a Chrome driver instance
+    driver = webdriver.Chrome()
     os.environ['PATH'] += r";C:\Users\Bunmi.Ogundare\pycharm_workspace\HCOneSeleniumAutiomation\drivers"
-    yield driver  # Provide the driver object to test functions
-    driver.quit()  # Quit the driver after the test
+    yield driver
+    driver.quit()
 
 
 def test_homepage_load(browser):
@@ -46,10 +46,10 @@ def test_join_the_team(browser):
     join_team_button = browser.find_element(By.LINK_TEXT, "Join The Team")
     join_team_button.click()
     time.sleep(10)
-    cookie_button = browser.find_element(By.LINK_TEXT, "I acknowledge I have read the above") #//*[@id="ctl00_MyBodyTag"]
+    cookie_button = browser.find_element(By.LINK_TEXT, "I acknowledge I have read the above")
     cookie_button.click()
     time.sleep(5)
-    cookiespolicy_button = browser.find_element(By.ID,  "epdsubmit")  # //*[@id="ctl00_MyBodyTag"]
+    cookiespolicy_button = browser.find_element(By.ID,  "epdsubmit")
     cookiespolicy_button.click()
     time.sleep(3)
     register_button = browser.find_element(By.XPATH, "//*[@id='ctl00_MyCandidateNavigation_liRegister']/a")
@@ -77,6 +77,3 @@ def test_search_result(browser):
     assert browser.title == expected_title, f"Expected title: {expected_title}, but got title: {browser.title}"
     print("Search result loaded successfully")
 
-
-# if __name__ == "__main__":
-#     pytest.main(["-v", "--html=report.html"])
