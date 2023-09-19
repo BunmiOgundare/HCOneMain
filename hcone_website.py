@@ -21,7 +21,7 @@ def test_homepage_load(browser):
     time.sleep(5)
     expected_title = "HC One - The Kind Care Company | Residential Care Homes"
     assert browser.title == expected_title, f"Expected title: {expected_title}, but got title: {browser.title}"
-    print("Homepage loaded successfully")
+    # print("Homepage loaded successfully")
 
 
 def test_getintouch(browser):
@@ -36,7 +36,7 @@ def test_getintouch(browser):
     time.sleep(10)
     expected_title = "Get In Touch - Contact Number and Details | HC One"
     assert browser.title == expected_title, f"Expected title: {expected_title}, but got title: {browser.title}"
-    print("Get In Touch page loaded successfully")
+    # print("Get In Touch page loaded successfully")
 
 
 def test_join_the_team(browser):
@@ -57,7 +57,7 @@ def test_join_the_team(browser):
     time.sleep(3)
     expected_title = "Login/Register - HC-One"
     assert browser.title == expected_title, f"Expected title: {expected_title}, but got title: {browser.title}"
-    print("Register page loaded successfully")
+    # print("Register page loaded successfully")
 
 
 def test_search_result(browser):
@@ -75,5 +75,5 @@ def test_search_result(browser):
     time.sleep(5)
     expected_title = "Kirkwood Court - Care home in Kenton, Newcastle upon Tyne | HC One"
     assert browser.title == expected_title, f"Expected title: {expected_title}, but got title: {browser.title}"
-    print("Search result loaded successfully")
+    # print("Search result loaded successfully")
 
